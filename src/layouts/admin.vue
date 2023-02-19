@@ -3,7 +3,7 @@
     
     <div class="container-fuild">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 d-none d-sm-flex">
                 SIDER BAR
             </div>
             <div class="col-sm-9">
