@@ -25,16 +25,16 @@
 </template>
 
 <script>
-import { defineComponent, reactive, toRefs } from 'vue';
+import { defineComponent } from 'vue';
+import { useMenu } from '../stores/use-menu.js';
+import { storeToRefs } from 'pinia'
+
 export default defineComponent({
   setup() {
-    const state = reactive({
-      selectedKeys: ['admin-users'],
-      openKeys: []
-    });
+    const store = useMenu();
     return {
-      ...toRefs(state),
-    };
+        ...storeToRefs(store)
+    }
   },
 });
 </script>
