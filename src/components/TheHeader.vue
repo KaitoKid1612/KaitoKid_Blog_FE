@@ -26,9 +26,7 @@
         title="DANH MỤC"
         placement="left"
     >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <TheMenu></TheMenu>
     </a-drawer>
 
     <a-drawer
@@ -37,29 +35,26 @@
         title="USER"
         placement="right"
     >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        
     </a-drawer>
 </template>
 
 <script>
     import { defineComponent, ref } from 'vue';
-
+    import TheMenu from './TheMenu.vue';
+    
     export default defineComponent({
-        setup() {
-            const visible = ref(false);
-            const visible_user = ref(false);
-
-            const showDrawer = () => {
-                visible.value = true;
-            };
-
-            const showDrawerUser = () => {
-                visible_user.value = true;
-            };
-
-            return { visible, showDrawer, visible_user, showDrawerUser, };
-        },
-    });
+    setup() {
+        const visible = ref(false);
+        const visible_user = ref(false);
+        const showDrawer = () => {
+            visible.value = true;
+        };
+        const showDrawerUser = () => {
+            visible_user.value = true;
+        };
+        return { visible, showDrawer, visible_user, showDrawerUser, };
+    },
+    components: { TheMenu }
+});
 </script>
