@@ -6,6 +6,7 @@ import App from './App.vue'
 
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import 'bootstrap/dist/css/bootstrap-utilities.min.css'
+import './static/fontawesome-free-6.3.0-web/css/all.min.css'
 import 'ant-design-vue/dist/antd.css';
 
 const app = createApp(App);
